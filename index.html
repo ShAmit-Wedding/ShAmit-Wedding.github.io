@@ -75,6 +75,7 @@ h2{font:500 clamp(38px,7vw,60px) 'Cormorant Garamond',serif;color:#f8e8cb;margin
 .reveal.in-view{opacity:1;transform:none}
 @media(max-width:600px){
  .door-leaf{transition-duration:1.8s}
+ .door-art{object-fit:cover;object-position:center center}
  .intro-hint{font-size:9px;letter-spacing:2px;bottom:12px}
  section{padding:72px 19px}
  .timer{gap:7px}.time-box{min-width:69px;padding:13px 8px}.time-box strong{font-size:34px}
@@ -86,11 +87,11 @@ h2{font:500 clamp(38px,7vw,60px) 'Cormorant Garamond',serif;color:#f8e8cb;margin
 <body>
 <div id="intro" aria-label="Royal palace wedding invitation entrance">
   <div class="intro-backdrop"></div>
-  <div class="door-leaf left"></div>
-  <div class="door-leaf right"></div>
+  <div class="door-leaf left"><img class="door-art" src="palace-doors.png" alt=""></div>
+  <div class="door-leaf right"><img class="door-art" src="palace-doors.png" alt=""></div>
   <div class="door-shadow"></div>
   <button id="openDoor" type="button" aria-label="Tap to open Shakala and Amit's wedding invitation"></button>
-  <div class="intro-hint">TAP ANYWHERE TO OPEN THE PALACE DOORS</div>
+  <div class="intro-hint">TAP THE DOORS TO OPEN</div>
 </div>
 
 <div class="top-controls">
