@@ -19,11 +19,9 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--gold-light);outline
 #intro{position:fixed;inset:0;z-index:100;background:#160811;perspective:1800px;overflow:hidden;display:grid;place-items:center;transition:visibility 1.2s}
 #intro.hide{visibility:hidden;pointer-events:none}
 .intro-backdrop{position:absolute;inset:0;background:radial-gradient(ellipse at center,#6d3940 0%,#32121f 58%,#13070d 100%)}
-.door-leaf{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;will-change:transform;transition:transform 2.25s cubic-bezier(.77,0,.18,1);backface-visibility:hidden;z-index:3;background:transparent}
-.door-art{position:absolute;top:0;left:0;width:100vw;height:100%;background-image:url('palace-doors.png');background-repeat:no-repeat;background-size:cover;background-position:center center}
-.door-leaf.left{left:0;transform-origin:left center;border-right:1px solid #e6c47c}
-.door-leaf.right{right:0;transform-origin:right center;border-left:1px solid #e6c47c}
-.door-leaf.right .door-art{left:-50vw}
+.door-leaf{position:absolute;top:0;bottom:0;width:50.2%;background-image:url('palace-doors.png');background-repeat:no-repeat;background-size:200% 100%;will-change:transform;transition:transform 2.25s cubic-bezier(.77,0,.18,1);backface-visibility:hidden;z-index:3}
+.door-leaf.left{left:0;background-position:left center;transform-origin:left center;border-right:1px solid #e6c47c}
+.door-leaf.right{right:0;background-position:right center;transform-origin:right center;border-left:1px solid #e6c47c}
 #intro.open .door-leaf.left{transform:rotateY(-108deg)}
 #intro.open .door-leaf.right{transform:rotateY(108deg)}
 .door-shadow{position:absolute;inset:0;z-index:2;pointer-events:none;box-shadow:inset 0 0 100px 25px #090307}
@@ -77,8 +75,6 @@ h2{font:500 clamp(38px,7vw,60px) 'Cormorant Garamond',serif;color:#f8e8cb;margin
 .reveal.in-view{opacity:1;transform:none}
 @media(max-width:600px){
  .door-leaf{transition-duration:1.8s}
- .door-art{background-size:auto 100%;background-position:center center}
- .door-art{object-fit:cover;object-position:center center}
  .intro-hint{font-size:9px;letter-spacing:2px;bottom:12px}
  section{padding:72px 19px}
  .timer{gap:7px}.time-box{min-width:69px;padding:13px 8px}.time-box strong{font-size:34px}
@@ -90,11 +86,11 @@ h2{font:500 clamp(38px,7vw,60px) 'Cormorant Garamond',serif;color:#f8e8cb;margin
 <body>
 <div id="intro" aria-label="Royal palace wedding invitation entrance">
   <div class="intro-backdrop"></div>
-  <div class="door-leaf left"><img class="door-art" src="palace-doors.png" alt=""></div>
-  <div class="door-leaf right"><img class="door-art" src="palace-doors.png" alt=""></div>
+  <div class="door-leaf left"></div>
+  <div class="door-leaf right"></div>
   <div class="door-shadow"></div>
   <button id="openDoor" type="button" aria-label="Tap to open Shakala and Amit's wedding invitation"></button>
-  <div class="intro-hint">TAP THE DOORS TO OPEN</div>
+  <div class="intro-hint">TAP ANYWHERE TO OPEN THE PALACE DOORS</div>
 </div>
 
 <div class="top-controls">
