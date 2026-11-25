@@ -1,2 +1,2 @@
-# ShAmit-wedding.github.io
+# ShAmit-Wedding.github.io
 Digital wedding invitation website
